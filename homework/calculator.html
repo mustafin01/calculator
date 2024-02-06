@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="main.js"></script>
+    <title>deposit calculator</title>
+</head>
+<body>
+    <h1 class="title">deposit calculator</h1>
+    <label for="amount">Первоначальный депозит:</label>
+<input type="number" id="amount" name="amount">
+
+<label for="interest">Годовая процентная ставка:</label>
+<input type="number" id="interest" name="interest">
+
+<label for="time">Срок вклада:</label>
+<input type="number" id="time" name="time">
+
+<button onclick="calculateFinalAmount()">Рассчитать</button>
+
+<p id="result"></p>
+
+<script>
+function calculateFinalAmount() {
+  // Получение значений полей ввода
+  var amount = parseFloat(document.getElementById("amount").value);
+  var interestRate = parseFloat(document.getElementById("interest").value);
+  var time = parseFloat(document.getElementById("time").value);
+
+  // Рассчет конечной суммы
+  var finalAmount = amount * (1 + interestRate / 100) ** time;
+
+  // Отображение результата на странице
+  document.getElementById("result").innerHTML = "Сумма через " + time + " год(а/лет) составит: " + finalAmount.toFixed(2);
+}
+</script>
+
+</body>
+</html>

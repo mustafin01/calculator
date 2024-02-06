@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="./styler.css">
+    <script src="mains.js"></script>
+    <h1>Registration</h1>
+    <form id="registrationForm">
+        <form action="" class="form">
+            <div class="input-block">
+                <label for="#name">Name</label>
+                <input id="name" type="text" class="input" placeholder="Name">
+            </div>
+        
+            <div class="input-block">
+                <label for="textarea">About me</label>
+                <textarea id="description" name="about me" >I like to do...</textarea>
+            </div>
+        
+            <div class="input-block">
+                <label for="#email">Email address</label>
+                <input id="email" type="email" class="input" placeholder="Email">
+            </div>
+        
+        
+        
+            <div class="input-block">
+                <label for="#password">Passworld</label>
+                <input id="password" type="text" class="input" placeholder="Password">
+                
+            </div>
+        
+             <div class="input-block">
+                <label for="#password2">Passworld repearet</label>
+                <input id="password2" type="text" class="input" placeholder="Password repearet">
+            </div> 
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="input-block">
+            <label for="#select">Your town</label>
+            <select name="select" id="select">
+                <option value="1">Elabuga</option>
+                <option value="2">Naberezhnye Chelny</option>
+                <option value="3">Kazan</option>
+                <option value="4">Moscow</option>
+                <option value="5">Saint Petersburg</option>
+                <option value="6">Sochi</option>
+                <option value="7">Ufa</option>
+            </select>
+        </div>
+    
+        <div>
+            <label>
+              <input type="radio" name="gender" value="male">Boy</label>
+            <label>
+            <input type="radio" name="gender" value="female">Girl</label>
+        </div>
+    
+        <div class="class-block">
+            <label for="#agree">I agree</label>
+            <input id="agree" type="checkbox" class="input">
+        </div>
+        <script>
+        
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Отменить отправку формы
+            window.location.href = 'calculator.html'; // Перейти на страницу с калькулятором
+        });
+        </script>
+</body>
+</html>
